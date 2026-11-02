@@ -1,0 +1,21 @@
+{
+  "titre": "<em>Sika</em>, gabarits e-mail",
+  "type": "E-mailing · newsletter",
+  "sous_titre": "Responsive, compatible Outlook, mode sombre, sans images obligatoires",
+  "couleur": "#0f1a14",
+  "graine": 12,
+  "voix": [[3.3, "Sika, trois gabarits e-mail codés à la main,"], [8.2, "ils s'adaptent au mobile, passent en mode sombre, et restent lisibles dans Outlook,"], [16.6, "newsletter, reçu de transaction, invitation, le HTML est prêt pour votre outil d'envoi."]],
+  "etapes": [
+    {"t": "wait", "ms": 700},
+    {"t": "scroll", "y": 340, "ms": 900, "pause": 500},
+    {"t": "scroll", "y": 900, "ms": 1400, "pause": 300},
+    {"t": "scroll", "y": 340, "ms": 800, "pause": 200},
+    {"t": "click", "sel": "#dv button[data-v=m]", "pause": 1300},
+    {"t": "click", "sel": "#th button[data-v=d]", "pause": 1300},
+    {"t": "click", "sel": ".tpl[data-f=recu-transaction]", "pause": 1500},
+    {"t": "click", "sel": "#th button[data-v=l]", "pause": 900},
+    {"t": "click", "sel": ".tpl[data-f=invitation]", "pause": 1200},
+    {"t": "click", "sel": "#dv button[data-v=d]", "pause": 1400},
+    {"t": "click", "sel": "#cd button[data-v=c]", "pause": 1600}
+  ]
+}
