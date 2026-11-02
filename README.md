@@ -10,7 +10,7 @@ Spot de présentation (30 s) : [media/spot-30s.mp4](https://lordlennyx.github.io
 
 ## Ce que le projet montre
 
-- Newsletter mensuelle, reçu de transaction Mobile Money, invitation à un événement
+- Newsletter mensuelle, reçu de virement instantané, invitation à un événement
 - Mise en page en tableaux 600 px fluide, colonnes empilées sur mobile, styles en ligne
 - Boutons « bulletproof » VML pour Outlook Windows, conditionnels MSO, réglage 96 DPI
 - Mode sombre (prefers-color-scheme et Outlook.com), pré-en-tête masqué, aucune image obligatoire

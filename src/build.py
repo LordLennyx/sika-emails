@@ -80,7 +80,7 @@ def newsletter():
 <div style="height:14px;line-height:14px;font-size:14px;">&nbsp;</div>
 <h1 class="h1 tx" style="margin:0;font-family:{SERIF};font-size:46px;line-height:50px;font-weight:400;color:{INK};letter-spacing:-1px;">Votre épargne a maintenant <span style="background:{LIME};color:{INK};padding:0 6px;">un objectif</span>.</h1>
 <div style="height:18px;line-height:18px;font-size:18px;">&nbsp;</div>
-{T('Rentrée, loyer, mariage, moto : créez une cagnotte, choisissez une date, et Sika met de côté un petit montant à chaque dépôt Mobile Money. Vous gardez la main à tout moment.', 17, 27, '#33413a')}
+{T('Rentrée, loyer, mariage, moto : créez une cagnotte, choisissez une date, et Sika met de côté un petit montant à chaque virement reçu. Vous gardez la main à tout moment.', 17, 27, '#33413a')}
 <div style="height:26px;line-height:26px;font-size:26px;">&nbsp;</div>
 {bouton('Créer mon objectif')}
 """, "44px 40px 40px")
@@ -89,7 +89,7 @@ def newsletter():
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
 <td class="col col-pad" width="50%" valign="top" style="padding-right:18px;">
 <p class="big" style="margin:0;font-family:{SERIF};font-size:64px;line-height:64px;color:{LIME};letter-spacing:-2px;">1,2&nbsp;Md</p>
-<p style="margin:8px 0 0;font-family:{FONT};font-size:14px;line-height:21px;color:#c9d3cc;">de francs CFA épargnés par la communauté Sika en octobre.</p></td>
+<p style="margin:8px 0 0;font-family:{FONT};font-size:14px;line-height:21px;color:#c9d3cc;">d'euros épargnés par la communauté Sika en octobre.</p></td>
 <td class="col" width="50%" valign="top" style="border-left:1px solid #2a3a31;padding-left:22px;">
 <p style="margin:0;font-family:{FONT};font-size:14px;line-height:22px;color:#c9d3cc;">L'objectif le plus populaire : <b style="color:#fff;">la rentrée scolaire</b>, avec 18 400 cagnottes ouvertes. Le plus original : un tracteur pour une coopérative de Foumbot.</p></td>
 </tr></table>""", "34px 36px", INK)
@@ -109,22 +109,22 @@ def newsletter():
 </td></tr></table></td>
 <td class="col" width="50%" valign="top" style="padding-left:6px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="card" style="background:#ffffff;border-radius:22px;padding:28px;">
-{T('PARRAINAGE', 11, 16, MUTE, 700, cls='mu', extra='letter-spacing:2px;')}<div style="height:10px;line-height:10px;font-size:10px;">&nbsp;</div>{T('2 000 F pour vous, 2 000 F pour chaque proche qui ouvre un compte.', 18, 25, INK, 700)}<div style="height:14px;line-height:14px;font-size:14px;">&nbsp;</div><a href="#" style="font-family:{FONT};font-size:14px;font-weight:700;color:{INK};text-decoration:underline;" class="tx">Mon code : AMINA-27</a>
+{T('PARRAINAGE', 11, 16, MUTE, 700, cls='mu', extra='letter-spacing:2px;')}<div style="height:10px;line-height:10px;font-size:10px;">&nbsp;</div>{T('5 € pour vous, 5 € pour chaque proche qui ouvre un compte.', 18, 25, INK, 700)}<div style="height:14px;line-height:14px;font-size:14px;">&nbsp;</div><a href="#" style="font-family:{FONT};font-size:14px;font-weight:700;color:{INK};text-decoration:underline;" class="tx">Mon code : AMINA-27</a>
 </td></tr></table></td>
 </tr></table></td></tr><tr><td style="height:12px;line-height:12px;font-size:12px;">&nbsp;</td></tr>"""
     return page("Le mois de Sika — novembre 2026", "Nouveau : des objectifs d'épargne automatiques, et votre premier retrait du mois offert.", hero + stat + nouv + deux)
 
 # ——— 2. Reçu de transaction ———
 def recu():
-    lignes = [("Bénéficiaire", "Mireille Ngo Bassong"), ("Numéro", "+237 6•• •• 41 07"), ("Opérateur", "MTN Mobile Money"), ("Motif", "Loyer novembre"), ("Date", "2 novembre 2026, 14 h 32"), ("Référence", "SK-7Q2M-48XD")]
+    lignes = [("Bénéficiaire", "Mireille Ngo Bassong"), ("IBAN", "FR76 •••• •••• 4107"), ("Mode", "Virement instantané SEPA"), ("Motif", "Loyer novembre"), ("Date", "2 novembre 2026, 14 h 32"), ("Référence", "SK-7Q2M-48XD")]
     rows = "".join(f"""<tr><td class="bd mu" style="border-top:1px solid {LINE};padding:13px 0;font-family:{FONT};font-size:14px;color:{MUTE};">{a}</td><td class="bd tx" align="right" style="border-top:1px solid {LINE};padding:13px 0;font-family:{FONT};font-size:14px;color:{INK};font-weight:600;">{b}</td></tr>""" for a, b in lignes)
     corps = carte(f"""
 <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background:{LIME};border-radius:24px;width:48px;height:48px;text-align:center;font-family:{FONT};font-size:24px;font-weight:700;color:{INK};line-height:48px;">&#10003;</td></tr></table>
 <div style="height:20px;line-height:20px;font-size:20px;">&nbsp;</div>
 {T('Transfert envoyé', 15, 22, MUTE, 600, cls='mu')}
-<p class="big tx" style="margin:6px 0 0;font-family:{SERIF};font-size:56px;line-height:58px;color:{INK};letter-spacing:-2px;">85&nbsp;000&nbsp;<span style="font-size:24px;letter-spacing:0;">FCFA</span></p>
+<p class="big tx" style="margin:6px 0 0;font-family:{SERIF};font-size:56px;line-height:58px;color:{INK};letter-spacing:-2px;">130&nbsp;<span style="font-size:24px;letter-spacing:0;">€</span></p>
 <div style="height:8px;line-height:8px;font-size:8px;">&nbsp;</div>
-{T('Frais : 0 F (premier transfert du mois offert)', 14, 21, MUTE, cls='mu')}
+{T('Frais : 0 € (premier transfert du mois offert)', 14, 21, MUTE, cls='mu')}
 <div style="height:24px;line-height:24px;font-size:24px;">&nbsp;</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">{rows}</table>
 <div style="height:26px;line-height:26px;font-size:26px;">&nbsp;</div>
@@ -134,7 +134,7 @@ def recu():
 <div style="height:26px;line-height:26px;font-size:26px;">&nbsp;</div>
 {bouton('Télécharger le reçu PDF', w=280)}
 """, "40px 36px")
-    return page("Reçu Sika — 85 000 FCFA envoyés", "Votre transfert de 85 000 FCFA à Mireille Ngo Bassong a bien été effectué.", corps)
+    return page("Reçu Sika — 130 € envoyés", "Votre transfert de 130 € à Mireille Ngo Bassong a bien été effectué.", corps)
 
 # ——— 3. Invitation événement ———
 def invitation():
